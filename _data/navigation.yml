@@ -1,0 +1,14 @@
+# Belongs at: /_data/navigation.yml
+
+- title: Home
+  url: /
+- title: ML
+  url: /machine_learning
+- title: Research
+  url: /research
+- title: Awards
+  url: /awards
+- title: Projects
+  url: /projects
+- title: Resume
+  url: /cv
