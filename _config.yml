@@ -1,9 +1,8 @@
 name: Catalin Tiseanu github.io
 markdown: kramdown
 theme: jekyll-theme-architect
-
 title: Catalin Tiseanu
 description: My github.io page
 
 plugins:
-  - jekyll-font-awesome
+  - jekyll-redirect-from
