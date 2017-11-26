@@ -2,7 +2,7 @@ name: Catalin Tiseanu github.io
 markdown: kramdown
 theme: jekyll-theme-architect
 title: Catalin Tiseanu
-description: My github.io page
+description: Catalin Tiseanu's github.io page
 
 plugins:
   - jekyll-redirect-from
