@@ -1,0 +1,33 @@
+---
+layout: default
+title: Projects
+---
+
+<div class="projects">
+    <h1>Projects</h1>
+
+    <h2>Electoral turnout map for the Romanian elections - <a href="https://www.facebook.com/parlament2016.ro/">link</a></h2>
+
+    <p>Together with two of my friends, Mihai Ciucu and Mihai Gheorghe, I built the first <a href="http://parlament2016.ro" target="_">real-time turnout map</a> for the Romanian electoral elections. This project used the <a href="https://stemjs.org/" target="_">Stem.js</a> framework, which is still being developed by my two friends.</p>
+    <p>The main purpose of the site was to show the electoral turnout live (less than 2 minutes delay from the official government data) for the Romanian parliamentary elections which took place on the 11th of December 2016.<p>
+    <p> One of the main feature of the site was the fact that it showed the relative turnout compare to previous elections, for the same hour. This enabled citizens to see how their city was doing in terms of turnout, hopefully making people more motivated to vote. </p>
+    <p>Over 60.000 unique users accessed the website, meaning over 1% of the total Romanian voting population - and a significantly higher percentage of the internet-using population. It was also featured in over 10 Romanian national level publications, such as Digi24 or republica.ro </p>
+
+    <p> <a href="https://www.facebook.com/parlament2016.ro/">Facebook page of the project</a> </p>
+
+    <h2> GroupBy iterator for large streams of key-value pairs - <a href="https://github.com/CatalinTiseanu/heavy-duty-group-by">github link</a></h2>
+    <p>I wanted to build a production-grade algorithmic component of a real distributed system.
+    The task was to build a function which can group a large stream of key-value pairs:
+      <code>
+        def groupBy(input: Iterator[(K, V)]) -> Iterator[(K, List[V])]
+      </code>
+    </p>
+    <p>For example, for the stream <code>(1, 3), (4, 1), (1, 2), (4, 4), (100, 1)</code> it should produce an iterator over <code>[(1, [3, 2]), (4, [1, 4]), (1, [100])]</code>
+    Now assume the above stream could have billions of (key, value) pairs. In case the output doesn't fit in memory, it should be stored on disk and gracefully deleted once the whole iterator has been exhausted.
+    Written in Python 3 in February 2016.
+    <h2> Scientific Calculator - <a href="https://github.com/CatalinTiseanu/scientific-calculator">github link</a></h2>
+    <p> Scientific calculator which computes the result of an expression involving operators and functions.
+      Example <code>sin(pow(( 4 - 9 / 100), 2)) - max(cos(12), 4 * 2)</code> equals <code>7.59236</code>.
+      Supports custom operators and functions. Written in C++14 in November 2015.
+    </p>
+</div>
