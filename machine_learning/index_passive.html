@@ -1,0 +1,38 @@
+---
+layout: default
+title: Machine Learning
+---
+
+<div class="machine_learning">
+	<h1>Machine Learning</h1>
+
+    <p> My first real-world contact with Machine Learning came in 2010 at an internship at Facebook in Palo Alto.
+    There I worked in the Ads Optimization team. My role was to come up with new features in order to better match
+		users with ads. To that end, I wrote an neural network from scratch in C++ and used it to train an Autoencoder
+		over the sparse text data we had for users, in order to obtain more compressed representations.
+		I believe it was one of the first neural network implementations at Facebook.
+		I also used k-means in order to bucket the compressed representations into a categorical feature. </p>
+
+    <p> I competed and won first prize in the Spoken Language Identification challenge on TopCoder:
+			<a href="https://github.com/CatalinTiseanu/spoken-language-identification" target="_blank">github link</a>.
+			The task required building a language classifier which received as input a 10 second mp3 and had to classify
+			 the language spoken in the mp3 - amongst 176 output classes. I trained a
+			 <a href="http://scikit-learn.org/stable/modules/mixture.html" target="_blank">Gaussian Mixture Model (GMM)
+			 </a> with 2048 components per output language (meaning 176 GMM's with 2048 components each).
+			 I rented five AWS c4.8xlarge machines in order to be able to train them in time.
+			 I used <a href="https://github.com/juandavm/em4gmm">this</a> library for training the GMM's. I calibrated the language
+			 models using logistic regression as a final step. I used iPython notebooks, sklearn and AWS spot machines.</p>
+
+    <p> I also competed and got 5th prize in the Master Data Management challenge on TopCoder:
+			<a href="https://github.com/CatalinTiseanu/spoken-language-identification" target="_blank">github link</a>.
+			The task deduplicating a large databse of medical providers - around 500.000 rows.
+			The training data consisted of pairs which were known to be duplicates and the database containing the id,
+			name, address and labels (such as 'internal medicine' or 'emergency').
+			I used <i>blocking</i> in order to constrain the set of candidate pairs of rows to be evaluated to a manageable number.
+			I then trained a classifier which given a pair of rows predicted it their duplicates or not (using XGBoost) using the ground truth data.
+			Finally, I used the fact the the duplication relationship is transitive in order to obtain an additional improvement in score.
+			I used iPython, XGBoost, pandas, AWS spot machines and some custom C++ code in order to make the generation of the candidate set fast enough.
+		</p>
+
+
+</div>
