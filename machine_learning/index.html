@@ -5,12 +5,12 @@ title: Machine Learning
 
 <div class="machine_learning">
 	<h1>Machine Learning</h1>
-		<h2>Industry/client work</h2>
+		<h2>Industry / contests for clients</h2>
     <p> First real-world contact with Machine Learning came in 2010 at an internship at Facebook in Palo Alto</p>
 		<ul>
 			<li>Worked in the Ads Optimization team on improving the Click-Through-Rate (CTR) prediction</li>
 			<li>Task was to come with new features in order to better match users with ads</li>
-			<li>Wrote an neural network from scratch in C++ and used it to train an <a href="https://en.wikipedia.org/wiki/Autoencoder">Autoencoder</a>
+			<li>Wrote a neural network from scratch in C++ and used it to train an <a href="https://en.wikipedia.org/wiki/Autoencoder">Autoencoder</a>
 			over the sparse user text data</li>
 			<li>It was one of the first neural network implementations / usages at Facebook</li>
 			<li>Used k-means in order to bucket the compressed representations into a categorical feature</li>
@@ -27,18 +27,19 @@ title: Machine Learning
 			<li>Used logistic regression as the final step to calibrate the individual GMM's prediction</li>
 			<li>Rented 5 AWS c4.8xlarge spot instances in order to train the models in time</li>
 			<li>Used iPython notebooks, sklearn, AWS spot machines and  <a href="https://github.com/juandavm/em4gmm">this</a> GMM library</li>
+			<li>Client was <a href="https://www.faithcomesbyhearing.com/">Faith Comes by Hearing</a></li>
 			<li>The above was done within 2 weeks, in Summer 2015</li>
 		</ul>
 
     <p> Competed and got 5th prize in the Master Data Management challenge on TopCoder -
-			<a href="https://github.com/CatalinTiseanu/spoken-language-identification" target="_blank">github link</a></p>
+			<a href="https://github.com/CatalinTiseanu/master-data-management" target="_blank">github link</a></p>
 		<ul>
-			<li>Build a deduplication model which removed duplicates from a large database of medical providers - around 500.00 rows</li>
+			<li>Build a database deduplication model which removed duplicates from a large database of medical providers - around 500.000 rows</li>
 			<li>Training data consisted of pairs which were known to be duplicates and the database containing the id,
 			name, address and labels (such as 'internal medicine' or 'emergency').</li>
-			<li>Used <i>blocking</i> in order to constrain the set of candidate pairs of rows to be evaluated to a manageable number</li>
-			<li>Trained a Gradient Tree Boosting classifier (via <a href="https://github.com/dmlc/xgboost">XGBoost</a>) which given a pair of rows predicted if their duplicates - using the ground truth data</li>
-			<li>Used the fact the the duplication relationship is transitive in order to obtain an additional improvement after the classification phase</li>
+			<li>Used different indexing keys in order to reduce the set of candidate pairs of rows to be evaluated to a manageable number (<i>blocking</i>)</li>
+			<li>Trained a Gradient Tree Boosting classifier (via <a href="https://github.com/dmlc/xgboost">XGBoost</a>) which given a pair of rows predicted if they're duplicates - using the ground truth data</li>
+			<li>Used the fact the duplication relationship is transitive in order to obtain an additional improvement after the classification phase</li>
 			<li>Used iPython, XGBoost, pandas, AWS spot machines and some custom C++ code for fast candidate generation</li>
 			<li>The above was also done within 2 weeks, in Summer 2015</li>
 		</ul>
@@ -59,7 +60,7 @@ title: Machine Learning
 		<ul>
 			<li>Task was to build a 27-class grocery images classifier (given around 100 training images per class)
 			<li>Used multiple pretrained CNN's, such as VGG16, VGG19, Resnet50 and InceptionResNetV2, adding dense layers on top</li>
-			<li>Each model was independently traing via progressively increasing the strength of data augmentation as the model started to overfit to the data</li>
+			<li>Each model was independently trained via progressively increasing the strength of data augmentation as the model started to overfit to the data</li>
 			<li>Used an ensemble over the 4 types of pretrained models as well as different checkpoints from each of the model</li>
 			<li>Used Python Jupyter Notebooks, Keras and Google Compute Engine (Teska K80 GPU's)</li>
 		</ul>
